@@ -7,8 +7,18 @@ async function main() {
     data: {
       duration: 200,
       name: 'Curso de NodeJS',
-      description: 'Curso de NodeJS'
-    }
+      description: 'Curso de NodeJS',
+      teacher: {
+				connectOrCreate: {
+					where: {
+						name: "Daniele Leão Evangelista"
+					},
+					create: {
+						name: "Daniele Leão Evangelista"
+					},
+				},
+			},
+    },
   });
 
   console.log(result);
