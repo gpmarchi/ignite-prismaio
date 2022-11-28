@@ -42,3 +42,11 @@ model Authors {
 
   @@map("authors")
 }
+
+model Books {
+  id        String  @id @default(uuid())
+  name      String  @unique
+  author_id String  @unique
+
+  @@map("books")
+}
